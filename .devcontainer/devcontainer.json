@@ -3,7 +3,12 @@
 {
 	"name": "llm-chain",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/rust:0-1-bullseye",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"hostRequirements": {
+		"cpus": 4
+	},
   "postAttachCommand": {
     "llm-chain": "cargo build"
   },
