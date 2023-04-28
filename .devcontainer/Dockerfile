@@ -1,4 +1,6 @@
-FROM mcr.microsoft.com/devcontainers/rust:0-1-bullseye
+FROM 	mcr.microsoft.com/vscode/devcontainers/rust
 
 # Install `protoc`
-RUN /usr/bin/bash -c "export DEBIAN_FRONTEND=noninteractive && apt update && apt -y install protobuf-compiler"
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get -y install protobuf-compiler && \
+    rm -rf /var/lib/apt/lists/*
