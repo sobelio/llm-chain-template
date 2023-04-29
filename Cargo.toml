@@ -6,5 +6,5 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-llm-chain = "0.8.0"
-llm-chain-openai = "0.8.0"
+llm-chain = "0.8.2"
+llm-chain-openai = "0.8.2"
